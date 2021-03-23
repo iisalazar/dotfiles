@@ -12,7 +12,13 @@ call plug#begin("~/.vim/plugged")
   Plug 'jiangmiao/auto-pairs'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'yuezk/vim-js'
+  Plug 'SirVer/ultisnips'
 
+  " Snippets are separated from the engine. Add this if you want them:
+  Plug 'honza/vim-snippets'
+  Plug 'mlaursen/vim-react-snippets'
+  " Plug 'morgsmccauley/vim-react-native-snippets'
+  Plug 'wakatime/vim-wakatime'  
 call plug#end()
 
 "Config Section
@@ -248,3 +254,13 @@ set number
 let g:vim_jsx_pretty_colorful_config = 1
 " let g:vim_jsx_pretty_highlight_close_tag = 1
 set title
+
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<c-space>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"

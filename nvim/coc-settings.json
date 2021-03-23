@@ -9,7 +9,9 @@
     "html",
     "python",
     "css",
-    "scss"
+    "scss",
+    "xml",
+    "markdown"
   ],
   "eslint.filetypes": [
     "javascript",
