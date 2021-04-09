@@ -19,6 +19,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'mlaursen/vim-react-snippets'
   " Plug 'morgsmccauley/vim-react-native-snippets'
   Plug 'wakatime/vim-wakatime'  
+
+  Plug 'AndrewRadev/tagalong.vim'
 call plug#end()
 
 "Config Section
@@ -250,10 +252,7 @@ set shiftwidth=2
 set number
 
 " For syntax highlight tsx and jsx
-" let g:vim_jsx_pretty_disable_js = 1
-let g:vim_jsx_pretty_colorful_config = 1
-" let g:vim_jsx_pretty_highlight_close_tag = 1
-set title
+" let g:vim_jsx_pretty_disable_js = 1 let g:vim_jsx_pretty_colorful_config = 1 let g:vim_jsx_pretty_highlight_close_tag = 1 set title
 
 " Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
 " - https://github.com/Valloric/YouCompleteMe
@@ -264,3 +263,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" default filetype for *.asm files to *.nasm
+au BufRead,BufNewFile *.asm set filetype=nasm
