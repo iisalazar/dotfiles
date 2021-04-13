@@ -21,6 +21,17 @@ call plug#begin("~/.vim/plugged")
   Plug 'wakatime/vim-wakatime'  
 
   Plug 'AndrewRadev/tagalong.vim'
+
+  Plug 'tpope/vim-surround' 
+  " Surrounding
+  " for comments
+  Plug 'tpope/vim-commentary'
+
+  Plug 'rafi/awesome-vim-colorschemes'
+  Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+  Plug 'preservim/tagbar' " Awesome tagbar
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "Config Section
@@ -28,7 +39,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 syntax enable
-colorscheme dracula
+colorscheme onedark
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
@@ -51,7 +62,8 @@ function! OpenTerminal()
   split term://bash
   resize 10
 endfunction
-nnoremap <c-n> :call OpenTerminal()<CR>
+nnoremap <c-N> :call OpenTerminal()<CR>
+
 
 " use alt+hjkl to move between split/vsplit panels
 tnoremap <C-h> <C-\><C-n><C-w>h
@@ -266,3 +278,6 @@ let g:UltiSnipsEditSplit="vertical"
 
 " default filetype for *.asm files to *.nasm
 au BufRead,BufNewFile *.asm set filetype=nasm
+
+:set mouse=a
+nmap <F8> :TagbarToggle<CR>
