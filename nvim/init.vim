@@ -28,7 +28,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-commentary'
 
   Plug 'rafi/awesome-vim-colorschemes'
-  Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+  " Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+  Plug 'mg979/vim-visual-multi' " vim-multiple-cursors is unmaintained
   Plug 'preservim/tagbar' " Awesome tagbar
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
