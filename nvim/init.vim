@@ -6,7 +6,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+  let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-tslint']
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'jiangmiao/auto-pairs'
@@ -28,11 +28,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-commentary'
 
   Plug 'rafi/awesome-vim-colorschemes'
-  " Plug 'terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
-  Plug 'mg979/vim-visual-multi' " vim-multiple-cursors is unmaintained
   Plug 'preservim/tagbar' " Awesome tagbar
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'mg979/vim-visual-multi'
 call plug#end()
 
 "Config Section
