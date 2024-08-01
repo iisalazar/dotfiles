@@ -22,7 +22,8 @@ Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
 
-
+" set map leader to <Space>
+let mapleader = " "
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
 "map \r <Action>(ReformatCode)
@@ -37,8 +38,8 @@ nnoremap <C-w>h <Nop>
 nnoremap <C-w>l <Nop>
 nnoremap <C-w>j <Nop>
 nnoremap <C-w>k <Nop>
-
 nnoremap gh <Nop>
+nnoremap <leader>p <Nop>
 
 " Map Shift+h to move to the left split
 nnoremap <Space>h <C-w>h
@@ -46,8 +47,9 @@ nnoremap <Space>l <C-w>l
 nnoremap <Space>k <C-w>k
 nnoremap <Space>j <C-w>j
 
-map <Space>v <Action>(SplitVertically)
-map <Space>b <Action>(SplitHorizontally)
+map <leader>v <Action>(SplitVertically)
+map <leader>b <Action>(SplitHorizontally)
+map <leader>p <Action>(GotoFile)
 map gg <Action>(ShowErrorDescription)
 map gh <Action>(QuickJavaDoc)
 map gi <Action>(GotoImplementation)
@@ -56,6 +58,6 @@ map <S-h> <Action>(PreviousTab)
 
 " Nerdtree config
 set NERDTree
-nnoremap <C-e> :NERDTreeToggle<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeMapJumpParent='h'
