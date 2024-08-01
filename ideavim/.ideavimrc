@@ -50,6 +50,7 @@ map <Space>v <Action>(SplitVertically)
 map <Space>b <Action>(SplitHorizontally)
 map gg <Action>(ShowErrorDescription)
 map gh <Action>(QuickJavaDoc)
+map gi <Action>(GotoImplementation)
 map <S-l> <Action>(NextTab)
 map <S-h> <Action>(PreviousTab)
 
@@ -58,5 +59,3 @@ set NERDTree
 nnoremap <C-e> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeMapJumpParent='h'
-
-
