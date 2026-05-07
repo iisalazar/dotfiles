@@ -2,61 +2,39 @@
   "editor.lineNumbers": "relative",
   "editor.minimap.renderCharacters": false,
   "editor.minimap.enabled": false,
-  // vim settings
+
   "vim.leader": "<Space>",
   "vim.hlsearch": true,
+  "vim.useSystemClipboard": true, // copies "y", "d", etc. to the system clipboard
   "vim.normalModeKeyBindingsNonRecursive": [
-    // NAVIGATION
+    // NAVIGATION — buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
 
-    // switch between buffers
-    {
-      "before": ["<S-h>"],
-      "commands": [":bprevious"]
-    },
-    {
-      "before": ["<S-l>"],
-      "commands": [":bnext"]
-    },
+    // NAVIGATION — splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
 
-    {
-      "before": ["leader", "v"],
-      "commands": [":vsplit"]
-    },
-    {
-      "before": ["leader", "s"],
-      "commands": [":split"]
-    },
+    // NAVIGATION — focus
+    { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+    { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+    { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+    { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
 
-    {
-      "before": ["leader", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
-    },
-    {
-      "before": ["leader", "j"],
-      "commands": ["workbench.action.focusBelowGroup"]
-    },
-    {
-      "before": ["leader", "k"],
-      "commands": ["workbench.action.focusAboveGroup"]
-    },
-    {
-      "before": ["leader", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
-    },
-
-    {
-      "before": ["g", "h"],
-      "commands": ["editor.action.showDefinitionPreviewHover"]
-    }
+    // UNMAP — let these fall through to VS Code keybinds
+    { "before": ["g", "d"], "commands": [] },
+    { "before": ["g", "i"], "commands": [] },
+    { "before": ["g", "h"], "commands": [] },
+    { "before": ["g", "r"], "commands": [] },
+    { "before": ["g", "t"], "commands": [] },
+    { "before": ["g", "D"], "commands": [] }
   ],
+
   "vim.visualModeKeyBindings": [
-    // Stay in visual mode while indenting
     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
     { "before": [">"], "commands": ["editor.action.indentLines"] },
-    // Move selected lines while staying in visual mode
     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
-    // toggle comment selection
     { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
-  ],
+  ]
 }
